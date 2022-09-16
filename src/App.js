@@ -1,5 +1,6 @@
 import "./App.css";
 import schoolCampus from "./assets/img/school-campus.jpg";
+import schoolCampus2 from "./assets/img/school-campus2.jpg";
 import SchoolCardComponent from "./components/SchoolCardComponent";
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
     },
     {
       id: 2,
-      image: schoolCampus,
+      image: schoolCampus2,
       schoolName: "School Name 2",
       grades: "grades",
       totalStudents: "total students",
