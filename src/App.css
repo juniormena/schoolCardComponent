@@ -1,6 +1,6 @@
 :root {
-  --textColor: #052B52;
-  --hoverBackground: #ECFFFF;
+  --textColor: #052b52;
+  --hoverBackground: #ecffff;
 }
 
 * {
@@ -9,11 +9,10 @@
   margin: 0;
 }
 
-
 .school-card {
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   width: 433px;
   margin: 10px auto;
@@ -31,13 +30,14 @@
 }
 
 .school-card-footer {
-  border-top: 1px solid #E0E0E0;
+  border-top: 1px solid #e0e0e0;
   cursor: pointer;
 }
 
-.school-card-body:hover, .school-program-title:hover {
-  background-color: #ECFFFF;
-  border-radius:  0 0 10px 10px;
+.school-card-body:hover,
+.school-program-title:hover {
+  background-color: #ecffff;
+  border-radius: 0 0 10px 10px;
 }
 
 .school-card-body > img {
@@ -71,7 +71,7 @@
   display: flex !important;
 }
 
-.school-programs{
+.school-programs {
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -81,20 +81,36 @@
 .school-program {
   display: inherit;
   justify-content: inherit;
-  border: 1px solid #E0E0E0;
+  border: 1px solid #e0e0e0;
   border-radius: 5px;
   padding: 10px 15px;
-  color: #2622FF;
+  color: #2622ff;
   font-weight: 700;
-  
 }
 
 .school-program:last-child {
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
 
-.school-program+.school-program {
+.school-program + .school-program {
   margin-top: 16px;
 }
 
+@media only screen and (max-width: 420px) {
+  .school-card {
+    width: 350px;
+  }
 
+  .school-card-body {
+    flex-direction: column;
+  }
+
+  .school-card-body > img {
+    width: auto;
+    height: 200px;
+  }
+
+  .school-card-info {
+    margin-left: 0;
+  }
+}
