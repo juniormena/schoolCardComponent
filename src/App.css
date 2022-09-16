@@ -1,0 +1,100 @@
+:root {
+  --textColor: #052B52;
+  --hoverBackground: #ECFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+.school-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+  border-radius: 10px;
+  width: 433px;
+  margin: 10px auto;
+}
+
+.card-title {
+  color: var(--textColor);
+  margin-bottom: 8px;
+}
+
+.school-card-body {
+  display: flex;
+  padding: 24px 24px 15px 24px;
+  cursor: pointer;
+}
+
+.school-card-footer {
+  border-top: 1px solid #E0E0E0;
+  cursor: pointer;
+}
+
+.school-card-body:hover, .school-program-title:hover {
+  background-color: #ECFFFF;
+  border-radius:  0 0 10px 10px;
+}
+
+.school-card-body > img {
+  width: 104px;
+  height: 104px;
+  border-radius: 5px;
+}
+
+.school-card-info {
+  margin-left: 15px;
+}
+
+.school-card-info > p {
+  color: var(--textColor);
+  font-size: 10px;
+}
+
+.school-program-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 42px 10px 24px;
+}
+
+.school-programs {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+}
+
+.collapsed {
+  display: flex !important;
+}
+
+.school-programs{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.school-program {
+  display: inherit;
+  justify-content: inherit;
+  border: 1px solid #E0E0E0;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #2622FF;
+  font-weight: 700;
+  
+}
+
+.school-program:last-child {
+  margin-bottom: 20px;  
+}
+
+.school-program+.school-program {
+  margin-top: 16px;
+}
+
+
