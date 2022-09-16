@@ -11,16 +11,16 @@ const SchoolCardComponent = ({ school }) => {
     distanceAway,
     programs,
   } = school;
-  const [collapseState, updateCollapseState] = useState(false);
+  const [isCollapsed, updateCollapseState] = useState(false);
   const upArrow = <span>&#8593;</span>;
   const downArrow = <span>&#8595;</span>;
 
   const toggleCollapseSchoolPrograms = () => {
-    updateCollapseState(!collapseState);
+    updateCollapseState(!isCollapsed);
   };
 
   const getCollapsedClass = () => {
-    if(collapseState) return "collapsed";
+    if(isCollapsed) return "collapsed";
     return "";
 
   };
@@ -45,11 +45,11 @@ const SchoolCardComponent = ({ school }) => {
       </section>
       <section className="school-card-footer">
         <div
-          className="school-program-title"
+          className={`school-program-title ${isCollapsed ? 'reset-border-radius' : ''}`}
           onClick={toggleCollapseSchoolPrograms}
         >
           <h3 className="card-title">Programs Offered</h3>
-          {collapseState ? upArrow : downArrow}
+          {isCollapsed ? upArrow : downArrow}
         </div>
         <div className={`school-programs-collapsable ${getCollapsedClass()}`}>
           {programs.map((program) => (

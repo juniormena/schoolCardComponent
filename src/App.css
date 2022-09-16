@@ -38,10 +38,18 @@ body {
   border-top: 1px solid #e0e0e0;
 }
 
-.school-card-body:hover,
+.school-card-body:hover{
+  background-color: #ecffff;
+  border-radius:10px 10px  0 0;
+}
+
 .school-program-title:hover {
   background-color: #ecffff;
   border-radius: 0 0 10px 10px;
+}
+
+.reset-border-radius {
+  border-radius: 0 !important;
 }
 
 .school-card-body > img {
