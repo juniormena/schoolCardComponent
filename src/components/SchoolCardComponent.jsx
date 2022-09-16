@@ -12,11 +12,17 @@ const SchoolCardComponent = ({ school }) => {
     programs,
   } = school;
   const [collapseState, updateCollapseState] = useState(false);
-  const downArrow = <span>&#8595;</span>;
   const upArrow = <span>&#8593;</span>;
+  const downArrow = <span>&#8595;</span>;
 
   const toggleCollapseSchoolPrograms = () => {
     updateCollapseState(!collapseState);
+  };
+
+  const getCollapsedClass = () => {
+    if(collapseState) return "collapsed";
+    return "";
+
   };
 
   return (
@@ -45,7 +51,7 @@ const SchoolCardComponent = ({ school }) => {
           <h3 className="card-title">Programs Offered</h3>
           {collapseState ? upArrow : downArrow}
         </div>
-        <div className={`school-programs-collapsable ${collapseState ? "collapsed" : ""}`}>
+        <div className={`school-programs-collapsable ${getCollapsedClass()}`}>
           {programs.map((program) => (
             <article className="school-program" key={program.id}>
               <p>{program.name}</p>

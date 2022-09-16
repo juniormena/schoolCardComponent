@@ -29,6 +29,7 @@ export const getSchools = () => {
         { id: 1, name: "Program 4" },
         { id: 2, name: "Program 5" },
         { id: 3, name: "Program 6" },
+        { id: 4, name: "Program 7" }
       ],
     },
   ];
