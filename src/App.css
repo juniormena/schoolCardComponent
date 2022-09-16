@@ -71,7 +71,7 @@
   display: flex !important;
 }
 
-.school-programs {
+.school-programs-collapsable {
   display: none;
   flex-direction: column;
   justify-content: space-between;

@@ -1,21 +1,33 @@
 import { useState } from "react";
 
-
 const SchoolCardComponent = ({ school }) => {
-    const { id, image, schoolName, grades, totalStudents, address, distanceAway, programs } = school;
-    const [collapseState, updateCollapseState] = useState(false);
-    const downArrow = <span>&#8595;</span>;
-    const upArrow = <span>&#8593;</span>;
-  
-    const toggleCollapseSchoolPrograms = () => {
-      updateCollapseState(!collapseState);
-    };
+  const {
+    id,
+    image,
+    schoolName,
+    grades,
+    totalStudents,
+    address,
+    distanceAway,
+    programs,
+  } = school;
+  const [collapseState, updateCollapseState] = useState(false);
+  const downArrow = <span>&#8595;</span>;
+  const upArrow = <span>&#8593;</span>;
+
+  const toggleCollapseSchoolPrograms = () => {
+    updateCollapseState(!collapseState);
+  };
+
   return (
     <div className="school-card">
-      <section className="school-card-body" onClick={()=> {
-        // this will only work in localhost mode
-        window.location.href = `/school?school=${id}`
-      }}>
+      <section
+        className="school-card-body"
+        onClick={() => {
+          // this will only work in localhost mode
+          window.location.href = `/school?school=${id}`;
+        }}
+      >
         <img src={image} alt="school campus" />
         <div className="school-card-info">
           <h2 className="card-title">{schoolName}</h2>
@@ -33,16 +45,17 @@ const SchoolCardComponent = ({ school }) => {
           <h3 className="card-title">Programs Offered</h3>
           {collapseState ? upArrow : downArrow}
         </div>
-        <div className={`school-programs ${collapseState ? "collapsed" : ""}`}>
-        {programs.map((program)=> 
-          <article className="school-program" key={program.id}>
-            <p>{program.name}</p>
-            <span>&#43;</span>
-          </article> )}
+        <div className={`school-programs-collapsable ${collapseState ? "collapsed" : ""}`}>
+          {programs.map((program) => (
+            <article className="school-program" key={program.id}>
+              <p>{program.name}</p>
+              <span>&#43;</span>
+            </article>
+          ))}
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default SchoolCardComponent
+export default SchoolCardComponent;
