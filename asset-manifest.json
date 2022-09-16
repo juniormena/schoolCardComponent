@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/schoolCardComponent/static/css/main.d76c381c.css",
-    "main.js": "/schoolCardComponent/static/js/main.2b276489.js",
+    "main.css": "/schoolCardComponent/static/css/main.0df5fe92.css",
+    "main.js": "/schoolCardComponent/static/js/main.88159cd9.js",
     "static/js/787.80279270.chunk.js": "/schoolCardComponent/static/js/787.80279270.chunk.js",
     "static/media/school-campus2.jpg": "/schoolCardComponent/static/media/school-campus2.6010598c8d20381b8ab5.jpg",
     "static/media/school-campus.jpg": "/schoolCardComponent/static/media/school-campus.4dbcf7d8b8fb647b4668.jpg",
     "index.html": "/schoolCardComponent/index.html",
-    "main.d76c381c.css.map": "/schoolCardComponent/static/css/main.d76c381c.css.map",
-    "main.2b276489.js.map": "/schoolCardComponent/static/js/main.2b276489.js.map",
+    "main.0df5fe92.css.map": "/schoolCardComponent/static/css/main.0df5fe92.css.map",
+    "main.88159cd9.js.map": "/schoolCardComponent/static/js/main.88159cd9.js.map",
     "787.80279270.chunk.js.map": "/schoolCardComponent/static/js/787.80279270.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d76c381c.css",
-    "static/js/main.2b276489.js"
+    "static/css/main.0df5fe92.css",
+    "static/js/main.88159cd9.js"
   ]
 }
