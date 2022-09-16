@@ -12,7 +12,7 @@ const SchoolCardComponent = ({ school }) => {
     };
   return (
     <div className="school-card">
-      <section className="school-card-body" onClick={()=> window.location.href = `/school/${id}`}>
+      <section className="school-card-body" onClick={()=> window.location.href = `/school?school=${id}`}>
         <img src={image} alt="school campus" />
         <div className="school-card-info">
           <h2 className="card-title">{schoolName}</h2>

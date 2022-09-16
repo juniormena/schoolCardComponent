@@ -3,6 +3,8 @@ import schoolCampus from "./assets/img/school-campus.jpg";
 import SchoolCardComponent from "./components/SchoolCardComponent";
 
 function App() {
+  const params = new URLSearchParams(window.location.search);
+  let schoolId = params.get("school");
   const schools = [
     {
       id: 1,
@@ -32,7 +34,11 @@ function App() {
         { id: 3, name: "Program 6" },
       ],
     },
-  ];
+  ].filter((school) => {
+    if (!schoolId) return school;
+    else return school.id === parseInt(schoolId);
+  });
+
   return (
     <>
       {schools.map((school) => (
