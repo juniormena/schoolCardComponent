@@ -32,5 +32,20 @@ export const getSchools = () => {
         { id: 4, name: "Program 7" }
       ],
     },
+    {
+      id: 3,
+      image: 'https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014__340.jpg',
+      schoolName: "School Name 3",
+      grades: "Grades",
+      totalStudents: "Total students",
+      address: "Address",
+      distanceAway: "Distance away",
+      programs: [
+        { id: 1, name: "Program 8" },
+        { id: 2, name: "Program 9" },
+        { id: 3, name: "Program 10" },
+        { id: 4, name: "Program 11" }
+      ],
+    },
   ];
 };
