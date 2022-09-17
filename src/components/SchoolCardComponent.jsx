@@ -20,9 +20,8 @@ const SchoolCardComponent = ({ school }) => {
   };
 
   const getCollapsedClass = () => {
-    if(isCollapsed) return "collapsed";
+    if (isCollapsed) return "collapsed";
     return "";
-
   };
 
   return (
@@ -45,20 +44,24 @@ const SchoolCardComponent = ({ school }) => {
       </section>
       <section className="school-card-footer">
         <div
-          className={`school-program-title ${isCollapsed ? 'reset-border-radius' : ''}`}
+          className={`school-program-title ${
+            isCollapsed ? "reset-border-radius" : ""
+          }`}
           onClick={toggleCollapseSchoolPrograms}
         >
           <h3 className="card-title">Programs Offered</h3>
           {isCollapsed ? upArrow : downArrow}
         </div>
-        <div className={`school-programs-collapsable ${getCollapsedClass()}`}>
-          {programs.map((program) => (
-            <article className="school-program" key={program.id}>
-              <p>{program.name}</p>
-              <span>&#43;</span>
-            </article>
-          ))}
-        </div>
+        {isCollapsed && (
+          <div className={`school-programs-collapsable ${getCollapsedClass()}`}>
+            {programs.map((program) => (
+              <article className="school-program" key={program.id}>
+                <p>{program.name}</p>
+                <span>&#43;</span>
+              </article>
+            ))}
+          </div>
+        )}
       </section>
     </div>
   );
