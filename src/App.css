@@ -50,6 +50,7 @@ body {
 
 .reset-border-radius {
   border-radius: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .school-card-body > img {
@@ -88,7 +89,7 @@ body {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 10px 24px 0 24px;
 }
 
 .school-program {
