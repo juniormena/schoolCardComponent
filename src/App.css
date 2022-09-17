@@ -70,7 +70,7 @@ body {
 .school-program-title {
   display: flex;
   justify-content: space-between;
-  padding: 0 42px 10px 24px;
+  padding: 10px 42px 10px 24px;
   cursor: pointer;
 }
 
